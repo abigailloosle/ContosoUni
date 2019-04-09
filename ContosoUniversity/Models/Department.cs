@@ -25,6 +25,7 @@ namespace ContosoUniversity.Models
         public int? InstructorID { get; set; }
 
         [Timestamp]
+        [Display(Name = "Row Version")]
         public byte[] RowVersion { get; set; }
 
         public Instructor Administrator { get; set; }
