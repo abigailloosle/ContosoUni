@@ -1,0 +1,44 @@
+﻿@page
+@model ContosoUniversity.Pages.AboutModel
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<div class="jumbotron" style="color: #3B7375;">
+    <h1>About our founder</h1>
+    <p>Abby King is a wise and amazing programmer who saw a need and created a University.</p>
+    <p>Way to go, dear Abby.</p>
+    <br />
+    <p>Should you wish to contact her, please feel free to reach out to her secretary directly.</p>
+
+    <p><b>Email:</b> 123@gmail.com</p>
+    <p><b>Phone number:</b> 123-456-7890</p>
+    <p><b>Address:</b> 123 Main Street, Rexburg, ID, 83440</p>
+
+</div>
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Student)
+    {
+        <tr>
+            <td style="color: black;">
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td style="color: black;">
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>

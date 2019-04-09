@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.0" />
+  </ItemGroup>
+    
+ <ItemGroup>
+     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+    
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\SchoolViewModels\" />
+    <Folder Include="Pages\Courses\" />
+    <Folder Include="Pages\Instructors\" />
+    <Folder Include="Pages\Departments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\About.cshtml" />
+    <Content Remove="Pages\Courses\Delete.cshtml" />
+    <Content Remove="Pages\Courses\Details.cshtml" />
+    <Content Remove="Pages\PagesInstructors\Delete.cshtml" />
+    <Content Remove="Pages\PagesInstructors\Details.cshtml" />
+    <Content Remove="Pages\PagesDepartments\Delete.cshtml" />
+    <Content Remove="Pages\PagesDepartments\Details.cshtml" />
+  </ItemGroup>
+</Project>

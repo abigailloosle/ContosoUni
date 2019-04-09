@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] : Contoso University</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    <link href="https://fonts.googleapis.com/css?family=Lilita+One|Montserrat" rel="stylesheet">
+
+    <style>
+        h1, h2, h3, h4 {
+            font-family: 'Lilita One', cursive;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #296D4C;
+            color: white;
+        }
+
+        a {
+            color: #5AD2F4;
+        }
+
+        a:hover {
+            color: #c8c8c8;
+        }
+
+        button {
+            background-color: #5AD2F4; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table td, table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+            table tr:nth-child(odd) {
+                background-color: #C5E2D4;
+            }
+
+            table tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            table tr:hover {
+                background-color: #A9A9A9;
+            }
+
+            table th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #59ADAF;
+                color: white;
+            }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a asp-page="/Index" class="navbar-brand">Contoso University</a>
+            </div>
+            <ul class="nav navbar-nav" style="display: flex; flex-direction: row;">
+                <li style="padding-left: 5px;"><a asp-page="/Index">Home</a></li>
+                <li style="padding-left: 5px;"><a asp-page="/About">About</a></li>
+                <li style="padding-left: 5px;"><a asp-page="/Students/Index">Students</a></li>
+                <li style="padding-left: 5px;"><a asp-page="/Courses/Index">Courses</a></li>
+                <li style="padding-left: 5px;"><a asp-page="/Instructors/Index">Instructors</a></li>
+                <li style="padding-left: 5px;"><a asp-page="/Departments/Index">Departments</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2019 : Abby King : Contoso University</p>
+        </footer>
+    </div>
+
+    @*Remaining markup not shown for brevity.*@
+
+</body>
+</html>

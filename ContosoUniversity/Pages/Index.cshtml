@@ -1,0 +1,33 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="jumbotron" style="background: url(img/Uni.jpeg) no-repeat center -380px fixed; height: 400px;">
+    <h1 style="color: white; margin-left: 55%;">Contoso University</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Welcome to Contoso University</h2>
+        <p>
+            We care about our students. Learning is key. We cultivate
+            lots of happiness here on campus. Our mission statement
+            is all about the students and working 
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>See the classes we offer here</h2>
+        <p>There are so many options and we want you to find the right fit.</p>
+        <p>
+            <a asp-page="/Courses/Index" class="button">Check out our courses &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Check out our amazing professors</h2>
+        <p>You can download the completed project from GitHub.</p>
+        <p>
+            <a asp-page="/Instructors/Index" class="button">See our professors &raquo;</a>
+        </p>
+    </div>
+</div>
